@@ -1,6 +1,6 @@
 spring:
   application:
-    name: svca-service
+    name: sa-service
   cloud:
     config:
       uri: http://config:8888

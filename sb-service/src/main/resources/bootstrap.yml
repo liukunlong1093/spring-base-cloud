@@ -1,6 +1,6 @@
 spring:
   application:
-    name: svcb-service
+    name: sb-service
   cloud:
     config:
       uri: http://config:8888
