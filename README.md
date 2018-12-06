@@ -46,7 +46,7 @@
        `127.0.0.1	registry config monitor rabbitmq auth-service`  
        或者修改各服务配置文件中的相应主机名为本地 ip
     3. 启动 registry、config、monitor、zipkin
-    4. 启动 gateway、auth-service、svca-service、svcb-service
+    4. 启动 gateway、auth-service、sa-service、sb-service
 
 # 项目预览
 
