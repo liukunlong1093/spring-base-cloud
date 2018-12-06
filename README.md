@@ -95,7 +95,7 @@ Docker 启动访问 http://localhost:15673/ 默认账号 guest，密码 guest（
 # 接口测试
 1. 获取 Token
 ```
-curl -X POST -vu client:secret http://localhost:8060/uaa/oauth/token -H "Accept: application/json" -d "password=password&username=anil&grant_type=password&scope=read%20write"
+curl -X POST -vu client:secret http://localhost:8060/auth/oauth/token -H "Accept: application/json" -d "password=password&username=anil&grant_type=password&scope=read%20write"
 ```
 返回如下格式数据：
 ```
@@ -109,7 +109,7 @@ curl -X POST -vu client:secret http://localhost:8060/uaa/oauth/token -H "Accept:
 ```
 2. 使用 access token 访问 service a 接口
 ```
-curl -i -H "Authorization: Bearer eac56504-c4f0-4706-b72e-3dc3acdf45e9" http://localhost:8060/svca
+curl -i -H "Authorization: Bearer eac56504-c4f0-4706-b72e-3dc3acdf45e9" http://localhost:8060/sa
 ```
 返回如下数据：
 ```
@@ -118,7 +118,7 @@ svcb-service (172.18.0.2:8070)===>Say Hello
 ```
 3. 使用 access token 访问 service b 接口
 ```
-curl -i -H "Authorization: Bearer eac56504-c4f0-4706-b72e-3dc3acdf45e9" http://localhost:8060/svcb
+curl -i -H "Authorization: Bearer eac56504-c4f0-4706-b72e-3dc3acdf45e9" http://localhost:8060/sb
 ```
 返回如下数据：
 ```
