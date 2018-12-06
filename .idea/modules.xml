@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/auth-service/auth-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monitor/monitor.iml" filepath="$PROJECT_DIR$/monitor/monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sa-service/sa-service.iml" filepath="$PROJECT_DIR$/sa-service/sa-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sb-service/sb-service.iml" filepath="$PROJECT_DIR$/sb-service/sb-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-base-cloud.iml" filepath="$PROJECT_DIR$/.idea/spring-base-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin/zipkin.iml" filepath="$PROJECT_DIR$/zipkin/zipkin.iml" />
     </modules>
   </component>
 </project>
