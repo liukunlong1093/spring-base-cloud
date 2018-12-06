@@ -26,8 +26,8 @@
 * zipkin - 分布式跟踪
 * gateway - 代理所有微服务的接口网关
 * auth-service - OAuth2 认证服务
-* svca-service - 业务服务A
-* svcb-service - 业务服务B
+* sa-service - 业务服务A
+* sb-service - 业务服务B
 
 ## 体系架构
 ![architecture](/picture/architecture.jpg)
