@@ -59,8 +59,10 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
                 .secret("secret")
                 .authorizedGrantTypes("password", "refresh_token")
                 .scopes("read", "write")
-                .accessTokenValiditySeconds(36000) // 1 hour
-                .refreshTokenValiditySeconds(2592000) // 30 days
+                // 1 hour
+                .accessTokenValiditySeconds(40000)
+                // 30 days
+                .refreshTokenValiditySeconds(2592000)
                 .and()
                 .withClient("sa-service")
                 .secret("password")
@@ -71,6 +73,7 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
                 .secret("password")
                 .authorizedGrantTypes("client_credentials", "refresh_token")
                 .scopes("server")
+
         ;
 
     }
