@@ -17,16 +17,35 @@ ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
 
-zuul:
-  ignoredServices: '*'
-  routes:
-    auth-service:
-      path: /auth/**
-      stripPrefix: false
-      sensitiveHeaders:
-    sa-service:
-      path: /sa/**
-      sensitiveHeaders:
-    sb-service:
-      path: /sb/**
-      sensitiveHeaders:
+
+#服务名
+spring:
+  cloud:
+    gateway:
+      filter:
+        remove-non-proxy-headers:
+          headers:
+            - dummy
+      routes:
+        - id:  auth
+          # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
+          uri: lb://auth-service
+          predicates:
+            # 重点！转发该路径！,/userapi/**,
+            - Path=/auth/**
+          # http://localhost:6601/userapi/user/users/2, 必须加上StripPrefix=1，否则访问服务时会带上userapi
+          #而不是我们期望的去掉userapi，只保留**部分
+          filters:
+            - StripPrefix=1
+        - id:  sa
+          uri: lb://sa-service
+          predicates:
+            - Path=/sa/**
+          filters:
+            - StripPrefix=1
+        - id:  sb
+          uri: lb://sb-service
+          predicates:
+            - Path=/sb/**
+          filters:
+            - StripPrefix=1
