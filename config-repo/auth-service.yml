@@ -3,6 +3,8 @@ server:
   port: 5000
 
 management:
+  security:
+    enabled: false
   context-path: /mgmt
 
 eureka:
