@@ -1,10 +1,6 @@
 server:
   port: 8060
 
-management:
-  security:
-    enabled: false
-
 hystrix:
   command:
     default:

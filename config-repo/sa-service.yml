@@ -5,7 +5,6 @@ name: zhangxd
 
 eureka:
   instance:
-    health-check-url-path: /actuator/health
     metadata-map:
       user.name: ${spring.security.user.name}
       user.password: ${spring.security.user.password}
