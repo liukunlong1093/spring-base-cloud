@@ -3,17 +3,15 @@ server:
   port: 5000
 
 management:
-  security:
-    enabled: false
   context-path: /mgmt
 
 eureka:
   instance:
     metadata-map:
       management:
-        context-path: ${server.context-path}/actuator
-    health-check-url-path: ${server.context-path}/actuator/health
-    status-page-url-path: ${server.context-path}/actuator/info
+        context-path: /actuator
+    health-check-url-path: /actuator/health
+    status-page-url-path: /actuator/info
     home-page-url: http://localhost:${server.port}/
 
 spring:
