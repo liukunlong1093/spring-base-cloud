@@ -14,7 +14,7 @@ eureka:
         context-path: ${server.context-path}/actuator
     health-check-url-path: ${server.context-path}/actuator/health
     status-page-url-path: ${server.context-path}/actuator/info
-      home-page-url: http://localhost:${server.port}/
+    home-page-url: http://localhost:${server.port}/
 
 spring:
   datasource:
