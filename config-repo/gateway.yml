@@ -37,9 +37,9 @@ spring:
           filters:
             - StripPrefix=1
             - name: Hystrix
-                args:
-                  name: fallbackcmd
-                  fallbackUri: forward:/fallback
+              args:
+                name: fallbackcmd
+                fallbackUri: forward:/fallback
         - id:  sa
           uri: lb://sa-service
           predicates:
