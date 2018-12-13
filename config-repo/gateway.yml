@@ -1,6 +1,6 @@
 server:
   port: 8060
-
+#熔断器
 hystrix:
   command:
     default:
@@ -18,6 +18,9 @@ ribbon:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       filter:
         remove-non-proxy-headers:
           headers:
@@ -33,6 +36,10 @@ spring:
           #而不是我们期望的去掉userapi，只保留**部分
           filters:
             - StripPrefix=1
+            - name: Hystrix
+                args:
+                  name: fallbackcmd
+                  fallbackUri: forward:/fallback
         - id:  sa
           uri: lb://sa-service
           predicates:
