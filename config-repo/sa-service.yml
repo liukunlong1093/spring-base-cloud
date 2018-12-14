@@ -24,7 +24,8 @@ security:
       grant-type: client_credentials
       scope: server
 
-
+# tag::feign 开启断路器
 feign:
   hystrix:
     enabled: true
+# end::feign
