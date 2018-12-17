@@ -8,11 +8,6 @@ eureka:
     metadata-map:
       user.name: ${spring.security.user.name}
       user.password: ${spring.security.user.password}
-      management:
-        context-path: /actuator
-    health-check-url-path: /actuator/health
-    status-page-url-path: /actuator/info
-    home-page-url: http://localhost:${server.port}/
 
 spring:
   datasource:
