@@ -1,5 +1,6 @@
 server:
-  context-path: /auth
+  servlet:
+    context-path: /auth
   port: 5000
 
 eureka:
@@ -24,4 +25,3 @@ spring:
     user:
       name: user
       password: password
-
