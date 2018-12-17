@@ -2,9 +2,6 @@ server:
   context-path: /auth
   port: 5000
 
-management:
-  context-path: /mgmt
-
 eureka:
   instance:
     metadata-map:
