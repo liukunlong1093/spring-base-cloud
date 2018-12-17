@@ -8,6 +8,8 @@ management:
 eureka:
   instance:
     metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
       management:
         context-path: /actuator
     health-check-url-path: /actuator/health
@@ -20,3 +22,7 @@ spring:
     driver-class-name: org.h2.Driver
   jpa:
     show-sql: true
+security:
+  user:
+    name: user
+    password: ${CONFIG_SERVER_PASSWORD:password}
